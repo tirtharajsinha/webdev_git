@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>manual slider banner</title>
+    <link rel="stylesheet" href="slider-manual.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+       <!--slides divisions-->
+        <div class="slide first">
+          <img src="https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+          <div class="slide-text">
+            <h2><b><u>Text 1</u></b></h2>
+            This is the first slide.
+
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://images.pexels.com/photos/1428277/pexels-photo-1428277.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+          <div class="slide-text">
+            <h2><b><u>Text 2</u></b></h2>
+            This is the second slide.
+
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://images.pexels.com/photos/917494/pexels-photo-917494.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+          <div class="slide-text">
+            <h2><b><u>Text 3</u></b></h2>
+            This is the third slide.
+
+          </div>
+        </div>
+        <div class="slide">
+          <img src="https://images.pexels.com/photos/1252869/pexels-photo-1252869.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260" alt="">
+          <div class="slide-text">
+            <h2><b><u>Text 4</u></b></h2>
+            This is the fourth slide.
+
+          </div>
+        </div>
+
+        <!-- automatic navigation panel-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+
+      </div>
+      <!--manual navigation-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+     var counter=2;
+     setInterval(function(){
+       document.getElementById('radio'+counter).checked=true;
+       counter++;
+       if(counter > 4){
+         counter=1;
+       }
+     },5000);
+    </script>
+
+  </body>
+</html>

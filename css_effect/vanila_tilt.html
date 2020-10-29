@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vanila tilt effect</title>
+    <link rel="stylesheet" href="vanila_tilt.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h2 class="name">Product Name</h2>
+        <a href="#" class="buy">View Now</a>
+        <div class="circle"></div>
+        <img src="static/shoe2.png" class="product" alt="">
+      </div>
+      <div class="box">
+        <h2 class="name">Product Name</h2>
+        <a href="#" class="buy">View Now</a>
+        <div class="circle"></div>
+        <img src="static/shoe.png" class="product" alt="">
+      </div>
+      <div class="box">
+        <h2 class="name">Product Name</h2>
+        <a href="#" class="buy">View Now</a>
+        <div class="circle"></div>
+        <img src="static/shoe3.png" class="product" alt="">
+      </div>
+
+    </div>
+  </body>
+  <script src="vanilla-tilt.min.js" type="text/javascript"></script>
+  <script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+		    max: 25,
+		    speed: 600
+	});
+  </script>
+</html>
