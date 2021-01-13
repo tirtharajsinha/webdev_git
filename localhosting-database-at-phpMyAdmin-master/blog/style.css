@@ -1,0 +1,30 @@
+
+body {
+
+  padding: 0px;
+  height:100%;
+  background-color: #ccffee;
+  width: 100%;
+
+
+}
+.text{
+  color:green;
+  text-align: center;
+
+}
+.input{
+  padding-bottom: 10px;
+  width: 80%;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin:20px;
+  pointer-events:all;
+}
+.form{
+  width: 30%;
+  height: auto;
+  border:2px dotted green;
+  border-radius: 10px;
+  margin:20px auto;
+}
