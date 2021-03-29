@@ -1,0 +1,69 @@
+body {
+  padding: 0px;
+  height: 100%;
+  background-color: #2b2c2c;
+  width: 100%;
+}
+.text {
+  color: green;
+  text-align: center;
+  font: bolder 50px "Alfa Slab One";
+  background-image: url(image/floral.jpg);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+.input {
+  padding-bottom: 10px;
+  width: 80%;
+  border: 2px solid white;
+  border-radius: 5px;
+  margin: 20px;
+  pointer-events: all;
+  background-color: rgb(29, 28, 28);
+  border: none;
+
+  border-bottom: 2px solid white;
+  color: white;
+  transition: all 0.3s ease;
+}
+input:focus-visible,
+textarea:focus,
+select:focus {
+  /* border-width: 0px; */
+  outline: -webkit-focus-ring-color auto 0px;
+  background-color: rgb(29, 28, 28);
+}
+.form {
+  color: cornsilk;
+  width: 700px;
+  height: auto;
+
+  border-radius: 10px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+button {
+  background-color: rgba(38, 201, 201, 0.726);
+  border-radius: 15px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  padding-top: 10px;
+  transition: all 1s ease;
+  width: 80%;
+  margin-left: 10%;
+}
+button:hover {
+  background-color: cyan;
+}
+.box {
+  background-color: rgb(29, 28, 28);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 800px) {
+  .form {
+    width: 90%;
+  }
+}

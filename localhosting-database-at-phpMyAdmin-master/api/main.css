@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #252830;
+  color: white;
+  font-family: "Lato";
+}
+.container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+.box {
+  height: 400px;
+  width: 600px;
+  overflow: hidden;
+  position: relative;
+  margin-top: 50px;
+}
+.media {
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  position: absolute;
+  transition: all 0.6s ease;
+  width: 100%;
+}
+.media:hover {
+  transform: scale(1.1);
+}
+.box p {
+  color: #252830;
+  height: 100%;
+  margin-left: 15px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 250px;
+  /* background-color: rgba(255, 255, 255, 0.863); */
+  text-align: center;
+  padding-top: 20px;
+}
+.box p .title {
+  font: bolder 38px "Alfa Slab One";
+  text-align: center;
+  margin: 0;
+  color: black;
+  mix-blend-mode: lighten;
+  background-color: rgba(253, 253, 253, 0.838);
+  width: 250px;
+  letter-spacing: 2px;
+  display: block;
+  width: 100%;
+}
+.box p .des {
+  padding-top: 50px;
+  padding-right: 5px;
+  padding-left: 5px;
+  font-size: 15px;
+  background-color: rgba(253, 253, 253, 0.838);
+  display: block;
+  /* width: 100%; */
+  line-height: 30px;
+  letter-spacing: 1px;
+}
+.box p .lang {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  display: block;
+  background-color: rgba(196, 165, 28, 0.685);
+  text-align: left;
+  padding-left: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.box p .links {
+  bottom: 0px;
+  background-color: yellowgreen;
+  width: 100%;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  text-align: center;
+}
+.box p .links a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  color: #252830;
+}
+.box p .links a:nth-child(1) {
+  background-color: aqua;
+}
+.box p .links a:nth-child(2) {
+  padding-top: 10px;
+}
+.navbar {
+  width: 100%;
+  bottom: 50px;
+  position: fixed;
+}
+.nev {
+  width: 400px;
+  height: 50px;
+  border-radius: 25px;
+  margin: auto;
+  background-color: blueviolet;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  box-shadow: 0 4px 8px 0 rgba(211, 14, 178, 0.2),
+    0 6px 20px 0 rgba(208, 12, 226, 0.19);
+}
+.nev a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  display: inline;
+}
+@media only screen and (max-width: 650px) {
+  .container {
+    flex-direction: column;
+  }
+  .box {
+    display: flex;
+    flex-direction: column;
+    width: 295px;
+    margin: auto;
+    height: auto;
+    margin-top: 50px;
+  }
+  .media {
+    position: relative;
+    height: 200px;
+  }
+  .box p {
+    width: 100%;
+    position: relative;
+    padding-top: 0px;
+    margin-left: 0px;
+  }
+  .box p .des {
+    padding-top: 0px;
+  }
+  .nev {
+    width: 90%;
+  }
+}

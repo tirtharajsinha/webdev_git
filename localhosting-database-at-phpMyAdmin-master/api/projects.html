@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container" id="contents"></div>
+    <div class="navbar">
+      <div class="nev">
+        <a href="#"><i class="fa fa-home"></i></a>
+        <a href="#"><i class="fa fa-search"></i></a>
+        <a href="#"><i class="fa fa-bars"></i></a>
+      </div>
+    </div>
+    <script>
+      async function getText(url) {
+        const response = await fetch(url);
+
+        // Storing data in form of JSON
+        var data = await response.json();
+        if (data.status_code == 200) {
+          show(data);
+        }
+      }
+      function show(data) {
+        tab = "";
+
+        // Loop to access all rows
+        for (let r of data.data) {
+          data = `
+          <div class="box">
+        <div
+          class="media"
+          style="
+            background-image: url(https://quartziferous-wool.000webhostapp.com/api/${r.image});
+          "
+        ></div>
+        <p>
+          <span class="title">${r.name}</span>
+          <span class="des"
+            >${r.des}</span
+          >
+          <span class="lang"><b>Built with</b>: ${r.lang}</span>
+          <span class="links">
+            <a href="${r.source}">Source <br />code</a>
+            <a href="${r.deploy}">View</a>
+          </span>
+        </p>
+      </div>
+          `;
+          tab += data;
+        }
+        // Setting innerHTML as tab variable
+        document.getElementById("contents").innerHTML = tab;
+      }
+      getText(
+        "https://quartziferous-wool.000webhostapp.com/api/api.php?q=admin"
+      );
+    </script>
+  </body>
+</html>

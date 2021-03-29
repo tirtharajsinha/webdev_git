@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="container" id="contents">
+      <div class="box">
+        <div
+          class="media"
+          style="
+            background-image: url(https://images.pexels.com/photos/302804/pexels-photo-302804.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+          "
+        ></div>
+        <p>
+          <span class="title">FOREST</span>
+          <span class="des"
+            >The Tropical Rainforest is a forest occurring in tropical areas of
+            heavy rainfall. It is abundant with many species of wildlife and
+            vegetation.
+          </span>
+          <span class="lang"><b>Built with</b>: python3</span>
+
+          <span class="links">
+            <a href="#">Source <br />code</a>
+            <a href="#">View</a>
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <script>
+      async function getText(url) {
+        const response = await fetch(url);
+
+        // Storing data in form of JSON
+        var data = await response.json();
+        if (data.status_code == 200) {
+          show(data);
+        }
+      }
+      function show(data) {
+        tab = "";
+
+        // Loop to access all rows
+        for (let r of data.data) {
+          data = `
+          <div class="box">
+        <div
+          class="media"
+          style="
+            background-image: url(${r.image});
+          "
+        ></div>
+        <p>
+          <span class="title">${r.name}</span>
+          <span class="des"
+            >${r.des}</span
+          >
+          <span class="lang"><b>Built with</b>: ${r.lang}</span>
+          <span class="links">
+            <a href="${r.source}">Source <br />code</a>
+            <a href="${r.deploy}">View</a>
+          </span>
+        </p>
+      </div>
+          `;
+          tab += data;
+        }
+        // Setting innerHTML as tab variable
+        document.getElementById("contents").innerHTML = tab;
+      }
+      getText("http://localhost/api/api.php?q=admin");
+    </script>
+  </body>
+</html>
