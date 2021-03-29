@@ -5,9 +5,11 @@
 you can create a localhost database at phpMyAdmin following this code.<br>
 Written in php,html,css,js.<br>
 going to deep of php .<br>
-1.simple php form.<br>
-2.data uploader-viewer fetchinh from database.<br>
-
+<ol>
+  <li>simple php form.</li>
+  <li>image upload/search by attribute using database.</li>
+  <li>api and data uploader for shoecasing of dynamic <a href="https://tirtharajsinha.github.io/webfiles/portfolio_v2.0/projects.html">projects page.</a></li>
+</ol>
 use index.php along with style.css.<br>
 sql for each table is included.<br>
 static files like .txt ,Image,audio,video is stored in a different folder.<br>
