@@ -64,7 +64,7 @@ if (isset($_POST["upload"])) {
 
 
 
-        <form class="form" action="index.html" method="post" enctype="multipart/form-data">
+        <form class="form" action="upload.php" method="post" enctype="multipart/form-data">
             <h1 class="text">Project Uploader</h1>
             <input type="hidden" name="size" value="1000000">
             <div class="box">
